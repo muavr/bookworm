@@ -3,11 +3,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BookWorm</title>
+    <title>{% block title %}BookWorm{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'bookworm/css/styles.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'bookworm/css/theme.css' %}">
 </head>
 <body>
+<a href="{% url 'bookworm:home' %}">Home</a>
 {% block content %}
 {% endblock content %}
 </body>
