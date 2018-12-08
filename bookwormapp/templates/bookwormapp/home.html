@@ -1,4 +1,13 @@
 {% extends 'bookwormapp/base.html' %}
+{% block title %}Home{% endblock title %}
 {% block content %}
-    <h1>Home page</h1>
+    <h1>BookWorm</h1>
+    {% if user.is_authenticated %}
+        <p>You are log in as user {{ user.username }}</p>
+        <a href="{% url 'bookworm:logout' %}">logout</a>
+        <a href="{% url 'bookworm:profile' %}">profile</a>
+    {% else %}
+        <p>Please log in.</p>
+        <a href="{% url 'bookworm:login' %}">login</a>
+    {% endif %}
 {% endblock content %}
