@@ -1,3 +1,6 @@
+#local
+settings_local.py
+bookwarm.db.sqlite3
 
 ### Python template
 # Byte-compiled / optimized / DLL files
